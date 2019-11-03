@@ -39,7 +39,7 @@
       </span>
     </header>
 
-    <section class="about">
+    <section id="about" class="about">
       <h1 class="about__heading">
         skwirowski<span class="about__heading--emphasize">.about()</span>
       </h1>
@@ -232,7 +232,6 @@
             </button>
           </div>
         </section>
-
       </div>
     </section>
 
@@ -273,9 +272,143 @@
         </button>
       </div>
     </section>
-    <!-- <section class="contact">
-      <h1>skwirowski.contact()</h1>
-    </section> -->
+
+    <section id="contact" class="contact">
+      <h1 class="contact__heading">
+        skwirowski<span class="contact__heading--emphasize">.contact()</span>
+      </h1>
+      <p class="contact__paragraph">
+        Please describe your question and send me a message via
+        <span class="contact__paragraph--emphasize">social media</span>
+        or <span class="contact__paragraph--emphasize">form</span> below.
+        I'll answer you ass soon as possible.
+      </p>
+      <section class="contact__socials">
+
+        <a
+          class="contact__socials-link"
+          href="https://github.com/skwirowski"
+          target="_blank"
+          title="icon downloaded from: https://www.flaticon.com"
+        >
+          <img
+            class="link__icon"
+            src="./utils/images/socials/github.svg"
+            alt="GitHub icon"
+          >
+        </a>
+
+        <a
+          class="contact__socials-link"
+          href="https://www.linkedin.com/in/pawel-skwirowski/"
+          target="_blank"
+          title="icon downloaded from: https://www.flaticon.com"
+        >
+          <img
+            class="link__icon"
+            src="./utils/images/socials/linkedin.svg"
+            alt="LinkedIn icon"
+          >
+        </a>
+
+        <a
+          class="contact__socials-link"
+          href="https: //www.facebook.com/skwirowski.pawel"
+          target="_blank"
+          title="icon downloaded from: https://www.flaticon.com"
+        >
+          <img
+            class="link__icon"
+            src="./utils/images/socials/facebook.svg"
+            alt="Facebook icon"
+          >
+        </a>
+
+      </section>
+      <form class="contact__form">
+
+        <div class="contact__form-item">
+          <label for="name-input" class="form-label">
+            Your name
+            <span class="form-label__required">*</span>
+          </label>
+          <input
+            type="text"
+            id="name-input"
+            class="form-input"
+            name="name"
+            placeholder="Your name"
+            required
+            pattern="[A-ZĄĆĘŁŃÓŚŹŻa-ząćęłńóśźż\s]*$"
+            title="Name can consist of only letters"
+            aria-describedby="name-help"
+            value=""
+          />
+          <small id="name-help" class="form-help">
+            Name can consist of only letters
+          </small>
+        </div>
+
+        <div class="contact__form-item">
+          <label for="email-input" class="form-label">
+            Your e-mail address
+            <span class="form-label__required">*</span>
+          </label>
+          <input
+            type="email"
+            id="email-input"
+            class="form-input"
+            name="email"
+            placeholder="Your email address"
+            required
+            aria-describedby="email-help"
+            value=""
+          />
+          <small id="email-help" class="form-help">
+            Example of a valid e-mail address: pskwirowski@gmail.com
+          </small>
+        </div>
+
+        <div class="contact__form-item">
+          <label for="subject-input" class="form-label">
+            Subject
+            <span class="form-label__required">*</span>
+          </label>
+          <input
+            type="text"
+            id="subject-input"
+            class="form-input"
+            name="subject"
+            placeholder="What's on your mind?"
+            required
+            value=""
+          />
+        </div>
+
+        <div class="contact__form-item">
+          <label for="message-input" class="form-label">
+            Message
+            <span class="form-label__required">*</span>
+          </label>
+          <textarea
+            id="message-input"
+            class="form-input"
+            cols="35"
+            rows="5"
+            name="message"
+            placeholder="Type your message here"
+            required
+            value=""
+          ></textarea>
+        </div>
+
+        <div class="contact__form-submit">
+          <button type="submit" class="submit-button">
+            SUBMIT
+          </button>
+        </div>
+      </form>
+    </section>
     <script src="./javascript/main.js" async defer></script>
   </body>
 </html>
