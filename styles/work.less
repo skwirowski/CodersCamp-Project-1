@@ -11,4 +11,81 @@
       color: @primary-color;
     }
   }
+
+  &__projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    .project {
+      &__picture {
+        height: 200px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        &-caption {
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          color: @medium-emphasis-text-color;
+          font-size: 0.7rem;
+        }
+      }
+
+      &:nth-child(1) {
+        .project__picture {
+          background-image: url('../utils/images/portfolio/portfolio_01.jpg');
+
+          &-caption:before {
+            content: 'Photo by Patrick Schneider on Unsplash';
+          }
+        }
+
+      }
+
+      &:nth-child(2) {
+        .project__picture {
+          background-image: url('../utils/images/portfolio/portfolio_02.jpg');
+
+          &-caption:before {
+            content: 'Photo by Dark Labs on Unsplash';
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .project__picture {
+          background-image: url('../utils/images/portfolio/portfolio_03.jpg');
+
+          &-caption:before {
+            content: 'Photo by Tan Kaninthanond on Unsplash';
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .project__picture {
+          background-image: url('../utils/images/portfolio/portfolio_04.jpg');
+
+          &-caption:before {
+            content: 'Photo by Andrii Podilnyk on Unsplash';
+          }
+        }
+      }
+    }
+  }
+
+  &__see-more-button-wrapper {
+    .main-boundary-wrapper();
+    margin-top: 30px;
+
+    .see-more-button {
+      .main-button-mix();
+      width: 100%;
+    }
+  }
 }

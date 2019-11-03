@@ -77,3 +77,68 @@
 .work__heading--emphasize {
   color: #BB86FC;
 }
+.work__projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.work__projects-container .project__picture {
+  height: 200px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.work__projects-container .project__picture-caption {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+}
+.work__projects-container .project:nth-child(1) .project__picture {
+  background-image: url('../utils/images/portfolio/portfolio_01.jpg');
+}
+.work__projects-container .project:nth-child(1) .project__picture-caption:before {
+  content: 'Photo by Patrick Schneider on Unsplash';
+}
+.work__projects-container .project:nth-child(2) .project__picture {
+  background-image: url('../utils/images/portfolio/portfolio_02.jpg');
+}
+.work__projects-container .project:nth-child(2) .project__picture-caption:before {
+  content: 'Photo by Dark Labs on Unsplash';
+}
+.work__projects-container .project:nth-child(3) .project__picture {
+  background-image: url('../utils/images/portfolio/portfolio_03.jpg');
+}
+.work__projects-container .project:nth-child(3) .project__picture-caption:before {
+  content: 'Photo by Tan Kaninthanond on Unsplash';
+}
+.work__projects-container .project:nth-child(4) .project__picture {
+  background-image: url('../utils/images/portfolio/portfolio_04.jpg');
+}
+.work__projects-container .project:nth-child(4) .project__picture-caption:before {
+  content: 'Photo by Andrii Podilnyk on Unsplash';
+}
+.work__see-more-button-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+.work__see-more-button-wrapper .see-more-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #121212;
+  text-transform: uppercase;
+  background-color: #03DAC5;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  width: 100%;
+}
