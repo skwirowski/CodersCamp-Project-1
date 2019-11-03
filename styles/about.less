@@ -5,10 +5,6 @@
   padding-top: @sections-distance;
   padding-bottom: @sections-distance;
 
-  &__boundary-wrapper {
-    .main-boundary-wrapper();
-  }
-
   &__heading {
     .main-heading-mix();
     text-align: center;
@@ -39,20 +35,18 @@
       .main-boundary-wrapper();
       margin-top: @avatar-height / 2 + 30px;
 
-      .content {
-        &__section {
-          .main-paragraph-mix();
-          margin-bottom: 15px;
+      .content__section {
+        .main-paragraph-mix();
+        margin-bottom: 15px;
 
-          &--emphasize {
-            color: @primary-color;
-            font-weight: @primary-font-weight-bold;
-          }
+        &--emphasize {
+          color: @primary-color;
+          font-weight: @primary-font-weight-bold;
+        }
 
-          &--italicize {
-            color: @high-emphasis-text-color;
-            font-style: @primary-font-style-regular-italic;
-          }
+        &--italicize {
+          color: @high-emphasis-text-color;
+          font-style: @primary-font-style-regular-italic;
         }
       }
     }

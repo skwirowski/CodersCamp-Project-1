@@ -62,11 +62,10 @@
   padding-bottom: 10px;
   padding-left: 25px;
 }
-.about {
-  padding-top: 60px;
+.skills {
   padding-bottom: 60px;
 }
-.about__heading {
+.skills__heading {
   font-family: 'Fira Code', monospace;
   font-weight: 700;
   font-size: 1.6rem;
@@ -75,64 +74,117 @@
   margin-bottom: 30px;
   text-align: center;
 }
-.about__heading--emphasize {
+.skills__heading--emphasize {
   color: #BB86FC;
 }
-.about__container-image {
-  height: 100px;
-  position: relative;
-  border-bottom: 2px solid #BB86FC;
-}
-.about__container-image .image__avatar-picture {
-  height: 200px;
-  position: absolute;
-  top: 0;
-  left: calc(50% - 200px / 2);
-  box-sizing: border-box;
-  border: 2px solid #BB86FC;
-  border-radius: 50%;
-}
-.about__container-content {
+.skills__container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 130px;
 }
-.about__container-content .content__section {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.5;
-  text-align: left;
-  margin-bottom: 30px;
-  margin-bottom: 15px;
+.skills__container-technology {
+  display: flex;
+  flex-wrap: wrap;
 }
-.about__container-content .content__section--emphasize {
-  color: #BB86FC;
-  font-weight: 700;
-}
-.about__container-content .content__section--italicize {
-  color: rgba(255, 255, 255, 0.87);
-  font-style: italic;
-}
-.about__content .content-paragraph {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.5;
-  text-align: left;
+.skills__container-technology figure {
   margin-bottom: 30px;
 }
-.about__content .content-paragraph--emphasize {
+.skills__container-technology figure:nth-last-child(1),
+.skills__container-technology figure:nth-last-child(2) {
+  margin-bottom: 0;
+}
+.skills__container-technology .technology {
+  width: 50%;
+}
+.skills__container-technology .technology__show-title {
+  height: 100px;
   display: block;
-  font-weight: 700;
-  color: #BB86FC;
-  margin-bottom: 10px;
+  cursor: auto;
 }
-.about__content .content-button-more {
+.skills__container-technology .technology__icon {
+  height: 100%;
+  width: 100%;
+}
+.skills__container-technology .technology__caption {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.skills__container-codewars {
+  width: 100%;
+  margin-top: 30px;
+}
+.skills__container-codewars .codewars__icon {
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.skills__container-codewars .codewars__caption {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.skills__container-codewars .codewars__badge-wrapper {
+  width: 250px;
+  margin: 15px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+.skills__container-codewars .codewars__badge-wrapper:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 20px solid #121212;
+  border-left: 11px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+.skills__container-codewars .codewars__badge-wrapper:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  border-top: 0px solid transparent;
+  border-left: 11px solid transparent;
+  border-bottom: 20px solid #121212;
+}
+.skills__container-more {
+  margin-top: 30px;
+}
+.skills__container-more .more__paragraph {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.skills__container-more .more__paragraph--emphasize {
+  color: #BB86FC;
+  font-weight: 700;
+}
+.skills__container-more .more__resume-button-wrapper {
+  text-align: center;
+}
+.skills__container-more .more__resume-button-wrapper .resume-button {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 1.15rem;

@@ -1,0 +1,126 @@
+@import './settings.less';
+
+.skills {
+  padding-bottom: @sections-distance;
+
+  &__heading {
+    .main-heading-mix();
+    text-align: center;
+
+    &--emphasize {
+      color: @primary-color;
+    }
+  }
+
+  &__container {
+    .main-boundary-wrapper();
+
+    &-technology {
+      display: flex;
+      flex-wrap: wrap;
+
+      figure {
+        margin-bottom: 30px;
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+          margin-bottom: 0;
+        }
+      }
+
+      .technology {
+        width: 50%;
+
+        &__show-title {
+          height: 100px;
+          display: block;
+          cursor: auto;
+        }
+
+        &__icon {
+          height: 100%;
+          width: 100%;
+        }
+
+        &__caption {
+          .main-paragraph-mix();
+          text-align: center;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-codewars {
+      width: 100%;
+      margin-top: 30px;
+
+      .codewars {
+        &__icon {
+          height: 100px;
+          display: block;
+          margin: 0 auto;
+        }
+
+        &__caption {
+          .main-paragraph-mix();
+          text-align: center;
+          margin-bottom: 0;
+        }
+      }
+
+      .codewars__badge-wrapper {
+        width: 250px;
+        margin: 15px auto 0;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-top: 20px solid @background-surface;
+          border-left: 11px solid transparent;
+          border-bottom: 0px solid transparent;
+        }
+
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 20px;
+          right: 0;
+          border-top: 0px solid transparent;
+          border-left: 11px solid transparent;
+          border-bottom: 20px solid @background-surface;
+        }
+      }
+    }
+
+    &-more {
+      margin-top: 30px;
+
+      .more {
+        &__paragraph {
+          .main-paragraph-mix();
+
+          &--emphasize {
+            color: @primary-color;
+            font-weight: @primary-font-weight-bold;
+          }
+        }
+
+        &__resume-button-wrapper {
+          text-align: center;
+
+          .resume-button {
+            .main-button-mix();
+          }
+        }
+      }
+    }
+  }
+}
