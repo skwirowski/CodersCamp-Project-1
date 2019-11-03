@@ -1,0 +1,67 @@
+@import 'resets.css';
+@import 'navigation.css';
+@import 'header.css';
+@import 'about.css';
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v7/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_NprJVD7Mw.ttf) format('truetype');
+}
+/* DARK THEME */
+.main-boundary-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-heading-mix {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.87);
+  text-align: left;
+  margin-bottom: 30px;
+}
+.main-paragraph-mix {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.main-button-mix {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #121212;
+  text-transform: uppercase;
+  background-color: #03DAC5;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+}

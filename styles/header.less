@@ -1,0 +1,42 @@
+@import './settings.less';
+
+.page-banner {
+  height: 400px;
+  position: relative;
+  background-image: url('../utils/images/header-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__content {
+    .main-boundary-wrapper();
+    padding-top: 100px;
+
+    .content {
+      &__heading {
+        .main-heading-mix();
+        font-size: 2.6rem;
+        text-align: center;
+      }
+
+      &__paragraph {
+        .main-paragraph-mix();
+        line-height: 2;
+        text-align: center;
+
+        &--emphasize {
+          color: @primary-color;
+          font-weight: @primary-font-weight-bold;
+        }
+      }
+    }
+  }
+
+  &__image-caption {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: @medium-emphasis-text-color;
+    font-size: 0.7rem;
+  }
+}

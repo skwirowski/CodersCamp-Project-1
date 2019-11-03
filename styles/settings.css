@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:700&display=swap');
+/* DARK THEME */
+.main-boundary-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-heading-mix {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.87);
+  text-align: left;
+  margin-bottom: 30px;
+}
+.main-paragraph-mix {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.main-button-mix {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #121212;
+  text-transform: uppercase;
+  background-color: #03DAC5;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+}

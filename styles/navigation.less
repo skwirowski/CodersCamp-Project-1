@@ -1,0 +1,59 @@
+@import './settings.less';
+@menu-height: 70px;
+
+.main-navigation {
+  height: @menu-height;
+  font-family: @primary-font-family;
+  font-weight: @primary-font-weight-regular;
+  font-size: @default-font-size;
+
+  &__boundary-wrapper {
+    .main-boundary-wrapper();
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    font-family: @secondary-font-family;
+    font-weight: @secondary-font-weight-bold;
+    font-size: 6.5vw;
+    color: @high-emphasis-text-color;
+
+    &--emphasize {
+      color: @primary-color;
+    }
+  }
+
+  &__hamburger {
+    display: flex;
+
+    .hamburger-menu {
+      display: flex;
+      align-items: center;
+      font-size: @default-font-size;
+      font-weight: @primary-font-weight-bold;
+      margin-right: 10px;
+    }
+
+    .hamburger {
+      height: 50px;
+      width: 17px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 5px;
+
+      &__dot {
+        height: 7px;
+        width: 7px;
+        display: block;
+        border-radius: 50%;
+        background-color: @high-emphasis-text-color;
+      }
+    }
+  }
+}

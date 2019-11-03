@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:700&display=swap');
+/* DARK THEME */
+.main-boundary-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-heading-mix {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.87);
+  text-align: left;
+  margin-bottom: 30px;
+}
+.main-paragraph-mix {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: left;
+}
+.main-navigation {
+  height: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+.main-navigation__boundary-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-navigation__logo {
+  display: block;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 6.5vw;
+  color: rgba(255, 255, 255, 0.87);
+}
+.main-navigation__logo--emphasize {
+  color: #BB86FC;
+}
+.main-navigation__hamburger {
+  display: flex;
+}
+.main-navigation__hamburger .hamburger-menu {
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.main-navigation__hamburger .hamburger {
+  height: 50px;
+  width: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.main-navigation__hamburger .hamburger__dot {
+  height: 7px;
+  width: 7px;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.87);
+}
