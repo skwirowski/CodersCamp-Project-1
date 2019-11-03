@@ -1,4 +1,5 @@
 @import './settings.less';
+@avatar-height: 200px;
 
 .about {
   padding-top: @sections-distance;
@@ -10,11 +11,54 @@
 
   &__heading {
     .main-heading-mix();
+    text-align: center;
 
     &--emphasize {
       color: @primary-color;
     }
   }
+
+  &__container {
+    &-image {
+      height: 100px;
+      position: relative;
+      border-bottom: 2px solid @primary-color;
+
+      .image__avatar-picture {
+        height: @avatar-height;
+        position: absolute;
+        top: 0;
+        left: calc(50% ~"-"@avatar-height / 2);
+        box-sizing: border-box;
+        border: 2px solid @primary-color;
+        border-radius: 50%;
+      }
+    }
+
+    &-content {
+      .main-boundary-wrapper();
+      margin-top: @avatar-height / 2 + 30px;
+
+      .content {
+        &__section {
+          .main-paragraph-mix();
+          margin-bottom: 15px;
+
+          &--emphasize {
+            color: @primary-color;
+            font-weight: @primary-font-weight-bold;
+          }
+
+          &--italicize {
+            color: @high-emphasis-text-color;
+            font-style: @primary-font-style-regular-italic;
+          }
+        }
+      }
+    }
+  }
+
+
 
   &__content {
     // background-color: fade(white, 5%);
