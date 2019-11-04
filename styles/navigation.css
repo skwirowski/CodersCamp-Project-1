@@ -64,6 +64,7 @@
 }
 .main-navigation {
   height: 70px;
+  position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.15rem;
@@ -90,6 +91,7 @@
 }
 .main-navigation__hamburger {
   display: flex;
+  cursor: pointer;
 }
 .main-navigation__hamburger .hamburger-menu {
   display: flex;
@@ -113,4 +115,38 @@
   display: block;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.87);
+}
+.main-navigation__mobile-menu {
+  height: auto;
+  width: 100%;
+  max-height: 0px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  background-color: #121212;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+.main-navigation__mobile-menu .mobile-menu {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.main-navigation__mobile-menu .mobile-menu__item {
+  display: block;
+  width: 220px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+.main-navigation__mobile-menu .mobile-menu__item-link {
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #BB86FC;
 }
