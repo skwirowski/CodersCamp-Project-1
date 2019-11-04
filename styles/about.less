@@ -32,7 +32,7 @@
 
     &-content {
       .main-boundary-wrapper();
-      margin-top: @avatar-height / 2 + 30px;
+      margin-top: @avatar-height / 2;
 
       .content__section {
         .main-paragraph-mix();
@@ -63,6 +63,32 @@
         .content__section {
           margin-bottom: 30px;
         }
+      }
+    }
+  }
+}
+
+@avatar-height-medium: 250px;
+
+@media @breakpoint-medium {
+  .about {
+    padding-top: @sections-distance-medium;
+
+    &__container {
+      &-image {
+        height: 125px;
+        border-bottom-width: 4px;
+
+        .image__avatar-picture {
+          height: @avatar-height-medium;
+          left: calc(50% ~"-"@avatar-height-medium / 2);
+          border-width: 4px;
+        }
+      }
+
+      &-content {
+        .main-boundary-wrapper();
+        margin-top: @avatar-height-medium / 2;
       }
     }
   }

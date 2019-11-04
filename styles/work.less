@@ -20,6 +20,10 @@
     grid-row-gap: 0px;
 
     .project {
+      &--screen-medium {
+        display: none;
+      }
+
       &__picture {
         height: 200px;
         position: relative;
@@ -82,6 +86,7 @@
   &__see-more-button-wrapper {
     .main-boundary-wrapper();
     text-align: center;
+    margin-top: 30px;
 
     .see-more-button {
       .main-button-mix();
@@ -103,6 +108,75 @@
 
     &__see-more-button-wrapper {
       .main-boundary-wrapper();
+      margin-top: 45px;
+    }
+  }
+}
+
+@media @breakpoint-medium {
+  .work {
+    padding-top: @sections-distance-medium;
+
+    &__projects-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+      .project {
+        &--screen-medium {
+          display: block;
+        }
+
+        &__picture {
+          height: 350px;
+        }
+
+        &:nth-child(5) {
+          .project__picture {
+            background-image: url('../utils/images/portfolio/portfolio_05.jpg');
+
+            &-caption:before {
+              content: 'Photo by Ilya Mirnyy on Unsplash';
+            }
+          }
+
+        }
+
+        &:nth-child(6) {
+          .project__picture {
+            background-image: url('../utils/images/portfolio/portfolio_06.jpg');
+
+            &-caption:before {
+              content: 'Photo by 🇨🇭 Claudio Schwarz | @purzlbaum on Unsplash';
+            }
+          }
+        }
+
+        &:nth-child(7) {
+          .project__picture {
+            background-image: url('../utils/images/portfolio/portfolio_07.jpg');
+
+            &-caption:before {
+              content: 'Photo by Johan De Jager on Unsplash';
+            }
+          }
+        }
+
+        &:nth-child(8) {
+          .project__picture {
+            background-image: url('../utils/images/portfolio/portfolio_08.jpg');
+
+            &-caption:before {
+              content: 'Photo by Maja Vujic on Unsplash';
+            }
+          }
+        }
+      }
+    }
+
+    &__see-more-button-wrapper {
       margin-top: 45px;
     }
   }

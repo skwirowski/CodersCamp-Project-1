@@ -70,7 +70,7 @@
 }
 @media (min-width: 768px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 }
 @media (min-width: 992px) {
@@ -100,7 +100,7 @@
 }
 @media (min-width: 768px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
   }
 }
 @media (min-width: 992px) {
@@ -145,7 +145,7 @@
 }
 @media (min-width: 768px) {
   .work__heading {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 }
 @media (min-width: 992px) {
@@ -167,6 +167,9 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+.work__projects-container .project--screen-medium {
+  display: none;
 }
 .work__projects-container .project__picture {
   height: 200px;
@@ -213,6 +216,7 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  margin-top: 30px;
 }
 @media (min-width: 576px) {
   .work__see-more-button-wrapper {
@@ -279,5 +283,50 @@
 @media (min-width: 576px) and (min-width: 1200px) {
   .work__see-more-button-wrapper {
     max-width: 1200px;
+  }
+}
+@media (min-width: 768px) {
+  .work {
+    padding-top: 100px;
+  }
+  .work__projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .work__projects-container .project--screen-medium {
+    display: block;
+  }
+  .work__projects-container .project__picture {
+    height: 350px;
+  }
+  .work__projects-container .project:nth-child(5) .project__picture {
+    background-image: url('../utils/images/portfolio/portfolio_05.jpg');
+  }
+  .work__projects-container .project:nth-child(5) .project__picture-caption:before {
+    content: 'Photo by Ilya Mirnyy on Unsplash';
+  }
+  .work__projects-container .project:nth-child(6) .project__picture {
+    background-image: url('../utils/images/portfolio/portfolio_06.jpg');
+  }
+  .work__projects-container .project:nth-child(6) .project__picture-caption:before {
+    content: 'Photo by 🇨🇭 Claudio Schwarz | @purzlbaum on Unsplash';
+  }
+  .work__projects-container .project:nth-child(7) .project__picture {
+    background-image: url('../utils/images/portfolio/portfolio_07.jpg');
+  }
+  .work__projects-container .project:nth-child(7) .project__picture-caption:before {
+    content: 'Photo by Johan De Jager on Unsplash';
+  }
+  .work__projects-container .project:nth-child(8) .project__picture {
+    background-image: url('../utils/images/portfolio/portfolio_08.jpg');
+  }
+  .work__projects-container .project:nth-child(8) .project__picture-caption:before {
+    content: 'Photo by Maja Vujic on Unsplash';
+  }
+  .work__see-more-button-wrapper {
+    margin-top: 45px;
   }
 }
