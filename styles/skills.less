@@ -52,7 +52,7 @@
 
     &-codewars {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 0px;
 
       .codewars {
         &__icon {
@@ -114,11 +114,54 @@
         }
 
         &__resume-button-wrapper {
+          text-align: center;
+
           .resume-button {
             .main-button-mix();
             width: 100%;
+            max-width: 300px;
           }
         }
+      }
+    }
+  }
+}
+
+@small-distance: 45px;
+
+@media @breakpoint-small {
+  .skills {
+    &__container {
+      &-technology {
+        figure {
+          margin-bottom: @small-distance;
+        }
+
+        .technology {
+          width: 33.333333%;
+          margin-bottom: 0;
+        }
+      }
+
+      &-codewars {
+        .codewars__badge-wrapper {
+          width: auto;
+          text-align: center;
+          overflow: visible;
+          margin: 30px auto 0;
+
+          &:before {
+            content: none;
+          }
+
+          &:after {
+            content: none;
+          }
+        }
+      }
+
+      &-more {
+        margin-top: @small-distance;
       }
     }
   }

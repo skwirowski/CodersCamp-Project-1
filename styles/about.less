@@ -38,6 +38,10 @@
         .main-paragraph-mix();
         margin-bottom: 15px;
 
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
         &--emphasize {
           color: @primary-color;
           font-weight: @primary-font-weight-bold;
@@ -46,6 +50,18 @@
         &--italicize {
           color: @high-emphasis-text-color;
           font-style: @primary-font-style-regular-italic;
+        }
+      }
+    }
+  }
+}
+
+@media @breakpoint-small {
+  .about {
+    &__container {
+      &-content {
+        .content__section {
+          margin-bottom: 30px;
         }
       }
     }

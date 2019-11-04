@@ -81,11 +81,30 @@
 
   &__see-more-button-wrapper {
     .main-boundary-wrapper();
-    margin-top: 30px;
+    text-align: center;
 
     .see-more-button {
       .main-button-mix();
       width: 100%;
+      max-width: 300px;
     }
   }
+}
+
+@media @breakpoint-small {
+  .work {
+    &__projects-container {
+      .project {
+        &__picture {
+          height: 400px;
+        }
+      }
+    }
+
+    &__see-more-button-wrapper {
+      .main-boundary-wrapper();
+      margin-top: 45px;
+    }
+  }
+
 }

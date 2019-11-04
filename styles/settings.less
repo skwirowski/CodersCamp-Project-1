@@ -24,9 +24,10 @@
 @disabled-text-color: fade(#ffffff, 38%);
 
 @default-font-size: 1.15rem;
-@medium-font-size: 1.30rem;
+@small-font-size: 1.30rem;
 
 @h1-mobile-font-size: 1.60rem;
+@h1-small-font-size: 2.20rem;
 // @h2-default-font-size: 3.00rem;
 // @h3-default-font-size: 2.75rem;
 // @h4-default-font-size: 2.50rem;
@@ -40,10 +41,27 @@
 @color-warning: #D50000;
 
 .main-boundary-wrapper {
+  box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  @media @breakpoint-small {
+    max-width: @bp-small;
+  }
+
+  @media @breakpoint-medium {
+    max-width: @bp-medium;
+  }
+
+  @media @breakpoint-large {
+    max-width: @bp-large;
+  }
+
+  @media @breakpoint-extra-large {
+    max-width: @bp-extra-large;
+  }
 }
 
 .main-heading-mix {
@@ -53,6 +71,23 @@
   color: @high-emphasis-text-color;
   text-align: left;
   margin-bottom: 30px;
+
+  @media @breakpoint-small {
+    font-size: @h1-small-font-size;
+    margin-bottom: 45px;
+  }
+
+  @media @breakpoint-medium {
+    font-size: @h1-small-font-size;
+  }
+
+  @media @breakpoint-large {
+    font-size: @h1-small-font-size;
+  }
+
+  @media @breakpoint-extra-large {
+    font-size: @h1-small-font-size;
+  }
 }
 
 .main-paragraph-mix {
@@ -63,6 +98,23 @@
   line-height: 1.5;
   text-align: left;
   margin-bottom: 30px;
+
+  @media @breakpoint-small {
+    font-size: @small-font-size;
+    margin-bottom: 45px;
+  }
+
+  @media @breakpoint-medium {
+    font-size: @small-font-size;
+  }
+
+  @media @breakpoint-large {
+    font-size: @small-font-size;
+  }
+
+  @media @breakpoint-extra-large {
+    font-size: @small-font-size;
+  }
 }
 
 .main-button-mix {
