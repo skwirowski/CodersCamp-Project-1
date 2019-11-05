@@ -31,6 +31,16 @@
         background-size: cover;
         background-position: 50% 50%;
 
+        &-description {
+          position: absolute;
+          top: 15%;
+          left: 15%;
+          font-size: 1.2rem;
+          color: @high-emphasis-text-color;
+          opacity: 0;
+          transition: all 500ms ease;
+        }
+
         &-caption {
           position: absolute;
           bottom: 5px;
@@ -44,6 +54,10 @@
         .project__picture {
           background-image: url('../utils/images/portfolio/portfolio_01.jpg');
 
+          &-description:before {
+            content: 'Material experiments';
+          }
+
           &-caption:before {
             content: 'Photo by Patrick Schneider on Unsplash';
           }
@@ -55,6 +69,10 @@
         .project__picture {
           background-image: url('../utils/images/portfolio/portfolio_02.jpg');
 
+          &-description:before {
+            content: 'Water reflections';
+          }
+
           &-caption:before {
             content: 'Photo by Dark Labs on Unsplash';
           }
@@ -65,6 +83,10 @@
         .project__picture {
           background-image: url('../utils/images/portfolio/portfolio_03.jpg');
 
+          &-description:before {
+            content: 'Light and shadow';
+          }
+
           &-caption:before {
             content: 'Photo by Tan Kaninthanond on Unsplash';
           }
@@ -74,6 +96,10 @@
       &:nth-child(4) {
         .project__picture {
           background-image: url('../utils/images/portfolio/portfolio_04.jpg');
+
+          &-description:before {
+            content: 'Look';
+          }
 
           &-caption:before {
             content: 'Photo by Andrii Podilnyk on Unsplash';
@@ -118,7 +144,6 @@
     padding-top: @sections-distance-medium;
 
     &__projects-container {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
       grid-column-gap: 0px;
@@ -137,6 +162,10 @@
           .project__picture {
             background-image: url('../utils/images/portfolio/portfolio_05.jpg');
 
+            &-description:before {
+              content: 'Fashion';
+            }
+
             &-caption:before {
               content: 'Photo by Ilya Mirnyy on Unsplash';
             }
@@ -148,6 +177,10 @@
           .project__picture {
             background-image: url('../utils/images/portfolio/portfolio_06.jpg');
 
+            &-description:before {
+              content: 'Rusticity';
+            }
+
             &-caption:before {
               content: 'Photo by 🇨🇭 Claudio Schwarz | @purzlbaum on Unsplash';
             }
@@ -158,6 +191,10 @@
           .project__picture {
             background-image: url('../utils/images/portfolio/portfolio_07.jpg');
 
+            &-description:before {
+              content: 'Expressions';
+            }
+
             &-caption:before {
               content: 'Photo by Johan De Jager on Unsplash';
             }
@@ -167,6 +204,10 @@
         &:nth-child(8) {
           .project__picture {
             background-image: url('../utils/images/portfolio/portfolio_08.jpg');
+
+            &-description:before {
+              content: 'Food, delicious food';
+            }
 
             &-caption:before {
               content: 'Photo by Maja Vujic on Unsplash';
@@ -180,5 +221,43 @@
       margin-top: 45px;
     }
   }
+}
 
+@media @breakpoint-large {
+  .work {
+    &__projects-container {
+      .project {
+        overflow: hidden;
+
+        &__picture {
+          transition: all 500ms ease;
+
+          &:hover {
+            transform: scale(1.2);
+            transform-origin: center;
+            transition: all 500ms ease;
+
+            .project__picture-description {
+              opacity: 1;
+              transition: all 500ms ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media @breakpoint-extra-large {
+  .work {
+    padding-top: @sections-distance-medium;
+
+    &__projects-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+    }
+  }
 }

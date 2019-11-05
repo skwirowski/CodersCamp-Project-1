@@ -75,12 +75,12 @@
 }
 @media (min-width: 992px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 .main-paragraph-mix {
@@ -105,12 +105,12 @@
 }
 @media (min-width: 992px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 @media (min-width: 1200px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 .main-button-mix {
@@ -120,10 +120,19 @@
   color: #121212;
   text-transform: uppercase;
   background-color: #03DAC5;
+  transition: background-color 500ms ease;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 25px;
+}
+.main-button-mix:hover {
+  background-color: #028f81;
+  transition: background-color 500ms ease;
+}
+.main-button-mix:active {
+  background-color: #015c53;
+  transition: background-color 500ms ease;
 }
 .work {
   padding-top: 60px;
@@ -150,12 +159,12 @@
 }
 @media (min-width: 992px) {
   .work__heading {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
   .work__heading {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 .work__heading--emphasize {
@@ -178,6 +187,15 @@
   background-size: cover;
   background-position: 50% 50%;
 }
+.work__projects-container .project__picture-description {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.87);
+  opacity: 0;
+  transition: all 500ms ease;
+}
 .work__projects-container .project__picture-caption {
   position: absolute;
   bottom: 5px;
@@ -188,11 +206,17 @@
 .work__projects-container .project:nth-child(1) .project__picture {
   background-image: url('../utils/images/portfolio/portfolio_01.jpg');
 }
+.work__projects-container .project:nth-child(1) .project__picture-description:before {
+  content: 'Material experiments';
+}
 .work__projects-container .project:nth-child(1) .project__picture-caption:before {
   content: 'Photo by Patrick Schneider on Unsplash';
 }
 .work__projects-container .project:nth-child(2) .project__picture {
   background-image: url('../utils/images/portfolio/portfolio_02.jpg');
+}
+.work__projects-container .project:nth-child(2) .project__picture-description:before {
+  content: 'Water reflections';
 }
 .work__projects-container .project:nth-child(2) .project__picture-caption:before {
   content: 'Photo by Dark Labs on Unsplash';
@@ -200,11 +224,17 @@
 .work__projects-container .project:nth-child(3) .project__picture {
   background-image: url('../utils/images/portfolio/portfolio_03.jpg');
 }
+.work__projects-container .project:nth-child(3) .project__picture-description:before {
+  content: 'Light and shadow';
+}
 .work__projects-container .project:nth-child(3) .project__picture-caption:before {
   content: 'Photo by Tan Kaninthanond on Unsplash';
 }
 .work__projects-container .project:nth-child(4) .project__picture {
   background-image: url('../utils/images/portfolio/portfolio_04.jpg');
+}
+.work__projects-container .project:nth-child(4) .project__picture-description:before {
+  content: 'Look';
 }
 .work__projects-container .project:nth-child(4) .project__picture-caption:before {
   content: 'Photo by Andrii Podilnyk on Unsplash';
@@ -245,12 +275,21 @@
   color: #121212;
   text-transform: uppercase;
   background-color: #03DAC5;
+  transition: background-color 500ms ease;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 25px;
   width: 100%;
   max-width: 300px;
+}
+.work__see-more-button-wrapper .see-more-button:hover {
+  background-color: #028f81;
+  transition: background-color 500ms ease;
+}
+.work__see-more-button-wrapper .see-more-button:active {
+  background-color: #015c53;
+  transition: background-color 500ms ease;
 }
 @media (min-width: 576px) {
   .work__projects-container .project__picture {
@@ -290,7 +329,6 @@
     padding-top: 100px;
   }
   .work__projects-container {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
@@ -305,11 +343,17 @@
   .work__projects-container .project:nth-child(5) .project__picture {
     background-image: url('../utils/images/portfolio/portfolio_05.jpg');
   }
+  .work__projects-container .project:nth-child(5) .project__picture-description:before {
+    content: 'Fashion';
+  }
   .work__projects-container .project:nth-child(5) .project__picture-caption:before {
     content: 'Photo by Ilya Mirnyy on Unsplash';
   }
   .work__projects-container .project:nth-child(6) .project__picture {
     background-image: url('../utils/images/portfolio/portfolio_06.jpg');
+  }
+  .work__projects-container .project:nth-child(6) .project__picture-description:before {
+    content: 'Rusticity';
   }
   .work__projects-container .project:nth-child(6) .project__picture-caption:before {
     content: 'Photo by 🇨🇭 Claudio Schwarz | @purzlbaum on Unsplash';
@@ -317,16 +361,50 @@
   .work__projects-container .project:nth-child(7) .project__picture {
     background-image: url('../utils/images/portfolio/portfolio_07.jpg');
   }
+  .work__projects-container .project:nth-child(7) .project__picture-description:before {
+    content: 'Expressions';
+  }
   .work__projects-container .project:nth-child(7) .project__picture-caption:before {
     content: 'Photo by Johan De Jager on Unsplash';
   }
   .work__projects-container .project:nth-child(8) .project__picture {
     background-image: url('../utils/images/portfolio/portfolio_08.jpg');
   }
+  .work__projects-container .project:nth-child(8) .project__picture-description:before {
+    content: 'Food, delicious food';
+  }
   .work__projects-container .project:nth-child(8) .project__picture-caption:before {
     content: 'Photo by Maja Vujic on Unsplash';
   }
   .work__see-more-button-wrapper {
     margin-top: 45px;
+  }
+}
+@media (min-width: 992px) {
+  .work__projects-container .project {
+    overflow: hidden;
+  }
+  .work__projects-container .project__picture {
+    transition: all 500ms ease;
+  }
+  .work__projects-container .project__picture:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: all 500ms ease;
+  }
+  .work__projects-container .project__picture:hover .project__picture-description {
+    opacity: 1;
+    transition: all 500ms ease;
+  }
+}
+@media (min-width: 1200px) {
+  .work {
+    padding-top: 100px;
+  }
+  .work__projects-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }

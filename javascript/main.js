@@ -1,6 +1,7 @@
 (function() {
   const hamburgerButton = document.querySelector('#hamburger');
   const mobileMenuItems = document.querySelectorAll('.mobile-menu__item-link');
+  const buttons = document.querySelectorAll('button');
   let isMenuOpen = false;
 
   function toggleMobileMenu() {
@@ -25,5 +26,11 @@
 
   mobileMenuItems.forEach(function(item) {
     item.addEventListener('click', openCloseMobileMenu);
+  });
+
+  buttons.forEach(function(item) {
+    item.addEventListener('click', function() {
+      alert("There is nothing attached to ME yet.");
+    });
   });
 })();

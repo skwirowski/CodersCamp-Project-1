@@ -30,6 +30,12 @@
           font-weight: @primary-font-weight-bold;
         }
       }
+
+      &__emoticon {
+        &--screen-large {
+          display: none;
+        }
+      }
     }
   }
 
@@ -47,7 +53,6 @@
     height: 500px;
 
     &__content {
-      .main-boundary-wrapper();
       padding-top: 150px;
 
       .content {
@@ -64,7 +69,6 @@
     height: 600px;
 
     &__content {
-      .main-boundary-wrapper();
       padding-top: 150px;
 
       .content {
@@ -75,3 +79,116 @@
     }
   }
 }
+
+@media @breakpoint-large {
+  .page-banner {
+    height: 700px;
+
+    &__content {
+      padding-top: 150px;
+
+      .content {
+        &__heading {
+          font-size: 4.2rem;
+        }
+
+        &__emoticon {
+          height: 75px;
+          width: 75px;
+          position: relative;
+          background-color: @high-emphasis-text-color;
+          border-radius: 50%;
+          -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+          margin-right: auto;
+          margin-left: auto;
+
+          &:hover {
+            animation-play-state: paused;
+          }
+
+          &--screen-large {
+            display: block;
+          }
+
+          &-image {
+            height: 80px;
+            position: absolute;
+            top: -2px;
+            left: -3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media @breakpoint-extra-large {
+  .page-banner {
+    height: 900px;
+
+    &__content {
+      padding-top: 200px;
+    }
+  }
+}
+
+  @-webkit-keyframes bounce {
+    from {
+      top: 0px;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+
+    25% {
+      top: -50px;
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    50% {
+      top: 50px;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+
+    75% {
+      top: -25px;
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    to {
+      top: 0px;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      top: 0px;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+
+    25% {
+      top: -50px;
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    50% {
+      top: 50px;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+
+    75% {
+      top: -25px;
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    to {
+      top: 0px;
+    }
+  }

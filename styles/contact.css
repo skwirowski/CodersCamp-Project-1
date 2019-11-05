@@ -75,12 +75,12 @@
 }
 @media (min-width: 992px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 .main-paragraph-mix {
@@ -105,12 +105,12 @@
 }
 @media (min-width: 992px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 @media (min-width: 1200px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 .main-button-mix {
@@ -120,10 +120,19 @@
   color: #121212;
   text-transform: uppercase;
   background-color: #03DAC5;
+  transition: background-color 500ms ease;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 25px;
+}
+.main-button-mix:hover {
+  background-color: #028f81;
+  transition: background-color 500ms ease;
+}
+.main-button-mix:active {
+  background-color: #015c53;
+  transition: background-color 500ms ease;
 }
 .contact {
   padding-top: 60px;
@@ -150,12 +159,12 @@
 }
 @media (min-width: 992px) {
   .contact__heading {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
   .contact__heading {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 .contact__heading--emphasize {
@@ -188,12 +197,12 @@
 }
 @media (min-width: 992px) {
   .contact__paragraph {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 @media (min-width: 1200px) {
   .contact__paragraph {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 @media (min-width: 576px) {
@@ -231,6 +240,12 @@
 .contact__socials-link .link__icon {
   height: 100%;
   width: 100%;
+  transition: all 250ms ease;
+}
+.contact__socials-link .link__icon:active {
+  transform: scale(0.9);
+  transform-origin: center;
+  transition: all 250ms ease;
 }
 .contact__form {
   box-sizing: border-box;
@@ -296,12 +311,12 @@
 }
 @media (min-width: 992px) {
   .contact__form-item .form-label {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 @media (min-width: 1200px) {
   .contact__form-item .form-label {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 .contact__form-item .form-label__required {
@@ -333,12 +348,21 @@
   color: #121212;
   text-transform: uppercase;
   background-color: #03DAC5;
+  transition: background-color 500ms ease;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 25px;
   width: 100%;
   max-width: 300px;
+}
+.contact__form-submit .submit-button:hover {
+  background-color: #028f81;
+  transition: background-color 500ms ease;
+}
+.contact__form-submit .submit-button:active {
+  background-color: #015c53;
+  transition: background-color 500ms ease;
 }
 @media (min-width: 576px) {
   .contact__socials {
@@ -415,12 +439,21 @@
     color: #121212;
     text-transform: uppercase;
     background-color: #03DAC5;
+    transition: background-color 500ms ease;
     padding-top: 10px;
     padding-right: 25px;
     padding-bottom: 10px;
     padding-left: 25px;
     width: 100%;
     max-width: 300px;
+  }
+  .contact__form-submit .submit-button:hover {
+    background-color: #028f81;
+    transition: background-color 500ms ease;
+  }
+  .contact__form-submit .submit-button:active {
+    background-color: #015c53;
+    transition: background-color 500ms ease;
   }
 }
 @media (min-width: 768px) and (min-width: 576px) {
@@ -441,5 +474,17 @@
 @media (min-width: 768px) and (min-width: 1200px) {
   .contact__wrapper {
     max-width: 1200px;
+  }
+}
+@media (min-width: 992px) {
+  .contact__socials-link .link__icon:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+    transition: all 250ms ease;
+  }
+  .contact__socials-link .link__icon:active {
+    transform: scale(0.9);
+    transform-origin: center;
+    transition: all 250ms ease;
   }
 }

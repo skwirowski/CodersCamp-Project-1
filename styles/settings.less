@@ -26,10 +26,12 @@
 @default-font-size: 1.15rem;
 @small-font-size: 1.30rem;
 @medium-font-size: 1.45rem;
+@large-font-size: 1.65rem;
 
 @h1-mobile-font-size: 1.60rem;
 @h1-small-font-size: 2.20rem;
 @h1-medium-font-size: 2.60rem;
+@h1-large-font-size: 3.00rem;
 
 @sections-distance: 60px;
 @sections-distance-medium: 100px;
@@ -82,11 +84,7 @@
   }
 
   @media @breakpoint-large {
-    font-size: @h1-small-font-size;
-  }
-
-  @media @breakpoint-extra-large {
-    font-size: @h1-small-font-size;
+    font-size: @h1-large-font-size;
   }
 }
 
@@ -109,11 +107,7 @@
   }
 
   @media @breakpoint-large {
-    font-size: @small-font-size;
-  }
-
-  @media @breakpoint-extra-large {
-    font-size: @small-font-size;
+    font-size: @large-font-size;
   }
 }
 
@@ -124,8 +118,19 @@
   color: @background-surface;
   text-transform: uppercase;
   background-color: @secondary-color;
+  transition: background-color 500ms ease;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 25px;
+
+  &:hover {
+    background-color: darken(@secondary-color, 15%);
+    transition: background-color 500ms ease;
+  }
+
+  &:active {
+    background-color: darken(@secondary-color, 25%);
+    transition: background-color 500ms ease;
+  }
 }

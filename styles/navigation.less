@@ -30,7 +30,22 @@
 
   &__hamburger {
     display: flex;
+    transition: all 250ms ease;
     cursor: pointer;
+
+    &:active {
+      .hamburger-menu {
+        color: @disabled-text-color;
+        transition: all 250ms ease;
+      }
+
+      .hamburger {
+        &__dot {
+          background-color: @disabled-text-color;
+          transition: all 250ms ease;
+        }
+      }
+    }
 
     .hamburger-menu {
       display: flex;
@@ -89,14 +104,22 @@
           font-size: 2rem;
           font-weight: @secondary-font-weight-bold;
           color: @primary-color;
+          transition: all 250ms ease;
+
+          &:active {
+            color: darken(@primary-color, 40%);
+            transition: all 250ms ease;
+          }
         }
       }
     }
   }
 }
 
-@media @breakpoint-small {
-
-
-
+@media @breakpoint-large {
+  .main-navigation {
+    &__logo {
+      font-size: 4rem;
+    }
+  }
 }

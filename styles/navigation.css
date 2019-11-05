@@ -70,17 +70,17 @@
 }
 @media (min-width: 768px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 }
 @media (min-width: 992px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
   .main-heading-mix {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 }
 .main-paragraph-mix {
@@ -100,17 +100,17 @@
 }
 @media (min-width: 768px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
   }
 }
 @media (min-width: 992px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 @media (min-width: 1200px) {
   .main-paragraph-mix {
-    font-size: 1.3rem;
+    font-size: 1.65rem;
   }
 }
 .main-button-mix {
@@ -120,10 +120,19 @@
   color: #121212;
   text-transform: uppercase;
   background-color: #03DAC5;
+  transition: background-color 500ms ease;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 25px;
+}
+.main-button-mix:hover {
+  background-color: #028f81;
+  transition: background-color 500ms ease;
+}
+.main-button-mix:active {
+  background-color: #015c53;
+  transition: background-color 500ms ease;
 }
 .main-navigation {
   height: 70px;
@@ -175,7 +184,16 @@
 }
 .main-navigation__hamburger {
   display: flex;
+  transition: all 250ms ease;
   cursor: pointer;
+}
+.main-navigation__hamburger:active .hamburger-menu {
+  color: rgba(255, 255, 255, 0.38);
+  transition: all 250ms ease;
+}
+.main-navigation__hamburger:active .hamburger__dot {
+  background-color: rgba(255, 255, 255, 0.38);
+  transition: all 250ms ease;
 }
 .main-navigation__hamburger .hamburger-menu {
   display: flex;
@@ -254,4 +272,14 @@
   font-size: 2rem;
   font-weight: 700;
   color: #BB86FC;
+  transition: all 250ms ease;
+}
+.main-navigation__mobile-menu .mobile-menu__item-link:active {
+  color: #5204b2;
+  transition: all 250ms ease;
+}
+@media (min-width: 992px) {
+  .main-navigation__logo {
+    font-size: 4rem;
+  }
 }
